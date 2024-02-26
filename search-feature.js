@@ -12,7 +12,6 @@ app.post('/search', (req, res) => {
   }).catch(err => res.status(500).send('An error occurred'));
 });
 
-// Vulnerable to XSS
 app.get('/display', (req, res) => {
   const message = req.query.message;
   res.send(`<div>${message}</div>`);
